@@ -8,7 +8,6 @@ page {
 
 .plan-item {
     float: left;
-    position: relative;
     width: 45%;
     height: 400rpx;
     margin-left: 3.333%;
@@ -17,9 +16,15 @@ page {
 }
 
 .plan-item-img {
-    position: absolute;
-    top: 0;
     display: block;
     width: 100%;
     height: 200rpx;
+}
+
+.plan-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 30rpx;
+    font-weight: 800;
 }

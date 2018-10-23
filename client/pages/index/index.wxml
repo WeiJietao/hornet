@@ -3,11 +3,11 @@
     <view class="plan-item">
         <image class="plan-item-img"
         src="./user-unlogin.png"></image>
-        <text>Plan.1.</text>
+        <text class="plan-title">Plan.1.</text>
     </view>
     <view class="plan-item">
         <image class="plan-item-img"
         src="./user-unlogin.png"></image>
-        <text>Plan.1.</text>
+        <text class="plan-title">Plan.1.</text>
     </view>
 </view>
