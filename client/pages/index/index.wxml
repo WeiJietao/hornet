@@ -1,13 +1,15 @@
 <!--index.wxml-->
 <view>
-    <view class="plan-item">
-        <image class="plan-item-img"
-        src="./user-unlogin.png"></image>
-        <text class="plan-title">Plan.1.</text>
-    </view>
-    <view class="plan-item">
-        <image class="plan-item-img"
-        src="./user-unlogin.png"></image>
-        <text class="plan-title">Plan.1.</text>
+    <view wx:for="{{activities}}" class="plan-item">
+        <image class="plan-img" src="{{item.img}}" />
+        <view class="plan-info">
+            <text class="plan-title bold">{{item.title}}<text class="type-tag">{{item.tag}}</text></text>
+            <text class="plan-host">
+                <text class="bold">HOST : </text>{{item.host}}
+            </text>
+            <text class="plan-detail">
+                <text class="bold">DETAIL : </text>{{item.detail}}
+            </text>
+        </view>
     </view>
 </view>

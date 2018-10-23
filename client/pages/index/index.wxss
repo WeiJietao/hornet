@@ -2,29 +2,74 @@
 page {
     justify-content: space-between;
     background: #efefef;
-    padding: 25rpx 0;
+    padding: 25rpx;
     box-sizing: border-box;
+    word-break: break-all;
 }
 
 .plan-item {
+    position: relative;
+    overflow: hidden;
     float: left;
-    width: 45%;
-    height: 400rpx;
-    margin-left: 3.333%;
+    width: 100%;
+    height: 250rpx;
+    margin-bottom: 25rpx;
     background-color: #ffffff;
-    border-radius: 5px 5px;
+    border-radius: 3px 3px;
 }
 
-.plan-item-img {
-    display: block;
-    width: 100%;
-    height: 200rpx;
+.plan-item .plan-img {
+    width: 40%;
+    max-width: 250rpx;
 }
 
-.plan-title {
+.plan-item .plan-info {
+    float: right;
+    box-sizing: border-box;
+    width: 60%;
+    padding-right: 20rpx;
+}
+
+.plan-info .plan-title {
+    position: relative;
     display: block;
     width: 100%;
-    text-align: center;
+    height: 75rpx;
+    line-height: 75rpx;
+    border-bottom: 1px solid #ececec;
     font-size: 30rpx;
-    font-weight: 800;
+}
+
+.plan-title .type-tag {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 20rpx;
+    height: 35rpx;
+    line-height: 35rpx;
+    padding: 0 10rpx;
+    margin: auto 0;
+    background-color: #3456c1;
+    color: #ffffff;
+    border-radius: 3px 3px;
+}
+
+.plan-info .plan-host {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 25rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.plan-info .plan-detail {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 115rpx;
+    font-size: 25rpx;
 }

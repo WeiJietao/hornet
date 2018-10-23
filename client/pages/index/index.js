@@ -8,7 +8,24 @@ Page({
         userInfo: {},
         logged: false,
         takeSession: false,
-        requestResult: ''
+        requestResult: '',
+
+        activities: [
+            {
+                img: './act1.jpg',
+                title: 'Activity 1',
+                tag: '我的',
+                host: 'WJT20',
+                detail: 'WJT200000000000000000000000000000000000000'
+            },
+            {
+                img: './act2.jpg',
+                title: 'Activity 2',
+                tag: '小组',
+                host: 'WJT20',
+                detail: 'WJT200000000000000000000000000000000000000'
+            }
+        ]
     },
 
     // 用户登录示例
