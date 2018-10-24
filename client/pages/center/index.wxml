@@ -1,0 +1,27 @@
+<!--pages/center/index.wxml-->
+<view>
+
+    <view class="user-board-container">
+        <view class="user-avator"></view>
+        <text class="user-name">WJT20</text>
+    </view>
+
+    <view class="record-list">
+        <view class="record-item">
+            <text class="record-text">
+                <text class="bold">参加计划数 : </text>
+                <text class="right">100</text>
+            </text>
+        </view>
+    </view>
+
+    <view class="func-list">
+        <view class="func-item bottom-border">
+            <text class="func-text">关于我们</text>
+        </view>
+        <view class="func-item text-center bg-red">
+            <text class="func-text white">退出登录</text>
+        </view>
+    </view>
+
+</view>

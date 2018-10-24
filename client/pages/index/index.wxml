@@ -1,6 +1,8 @@
 <!--index.wxml-->
 <view>
 
+    <button open-type="getUserInfo">登录·请求微信授权</button>
+
     <view class="choose-tab-container">
         <view wx:for="{{chooseTabs}}" wx:key="{{index}}" class="choose-tab">
             <text class="tab-text">{{item.text}}</text>
@@ -17,11 +19,9 @@
                     item.amount
                 }}</text></text>
                 <text class="plan-host">
-                    <text class="bold">HOST : </text>{{item.host}}
+                    <text class="bold">举办人 : </text>{{item.host}}
                 </text>
-                <text class="plan-detail">
-                    <text class="bold">DETAIL : </text>{{item.detail}}
-                </text>
+                <text class="plan-detail">{{item.detail}}</text>
             </view>
         </view>
     </view>

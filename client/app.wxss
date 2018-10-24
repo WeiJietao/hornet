@@ -8,3 +8,21 @@
 .bold {
     font-weight: 700;
 }
+.right {
+    float: right;
+}
+.bottom-border {
+    border-bottom: 1px solid #dcdcdc;
+}
+.red {
+    color: #f53d6b;
+}
+.white {
+    color: #ffffff;
+}
+.bg-red {
+    background-color: #f53d6b;
+}
+.text-center {
+    text-align: center;
+}

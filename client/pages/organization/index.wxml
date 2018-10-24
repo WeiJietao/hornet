@@ -4,10 +4,39 @@
     <view class="organ-container">
         <view class="tag">我的小组</view>
         <view class="organ-list">
-            <view class="organ-item"></view>
-            <view class="organ-item"></view>
-            <view class="organ-item"></view>
-            <view class="organ-item"></view>
+            <view wx:for="{{myOrganList}}" wx:key="{{index}}" class="organ-item">
+                <image class="organ-img" src="{{item.img}}" />
+                <text class="organ-title">{{item.title}}</text>
+                <view class="organ-detail">{{item.detail}}</view>
+                <view class="act-amount">{{item.actAmount}}</view>
+            </view>
+            <view class="empty-item"></view>
+        </view>
+    </view>
+
+    <view class="organ-container">
+        <view class="tag">热门小组</view>
+        <view class="organ-list">
+            <view wx:for="{{hotOrganList}}" wx:key="{{index}}" class="organ-item">
+                <image class="organ-img" src="{{item.img}}" />
+                <text class="organ-title">{{item.title}}</text>
+                <view class="organ-detail">{{item.detail}}</view>
+                <view class="act-amount">{{item.actAmount}}</view>
+            </view>
+            <view class="empty-item"></view>
+        </view>
+    </view>
+
+    <view class="organ-container">
+        <view class="tag">附近小组</view>
+        <view class="organ-list">
+            <view wx:for="{{nearOrganList}}" wx:key="{{index}}" class="organ-item">
+                <image class="organ-img" src="{{item.img}}" />
+                <text class="organ-title">{{item.title}}</text>
+                <view class="organ-detail">{{item.detail}}</view>
+                <view class="act-amount">{{item.actAmount}}</view>
+            </view>
+            <view class="empty-item"></view>
         </view>
     </view>
 

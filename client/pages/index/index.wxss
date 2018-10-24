@@ -1,6 +1,6 @@
 /**index.wxss**/
 page {
-    background: #ececec;
+    background: #f0f0f0;
     word-break: break-all;
 }
 
@@ -36,21 +36,21 @@ page {
     overflow: hidden;
     float: left;
     width: 100%;
-    height: 250rpx;
+    height: 200rpx;
     margin-bottom: 25rpx;
     background-color: #ffffff;
     border-radius: 3px 3px;
 }
 
 .plan-item .plan-img {
-    width: 40%;
-    max-width: 250rpx;
+    width: 30%;
+    max-width: 200rpx;
 }
 
 .plan-item .plan-info {
     float: right;
     box-sizing: border-box;
-    width: 60%;
+    width: 68%;
     padding-right: 20rpx;
 }
 
@@ -58,8 +58,8 @@ page {
     position: relative;
     display: block;
     width: 100%;
-    height: 75rpx;
-    line-height: 75rpx;
+    height: 60rpx;
+    line-height: 60rpx;
     border-bottom: 1px solid #ececec;
     font-size: 30rpx;
 }
@@ -69,9 +69,9 @@ page {
     top: 0;
     bottom: 0;
     right: 0;
-    font-size: 20rpx;
-    height: 35rpx;
-    line-height: 35rpx;
+    font-size: 18rpx;
+    height: 30rpx;
+    line-height: 32rpx;
     padding: 0 10rpx;
     margin: auto 0;
     background-color: #f53d6b;
@@ -94,6 +94,8 @@ page {
     display: block;
     overflow: hidden;
     width: 100%;
-    height: 115rpx;
+    height: 80rpx;
+    line-height: 28rpx;
     font-size: 25rpx;
+    color: #8c8c8c;
 }
