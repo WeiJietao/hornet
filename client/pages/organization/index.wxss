@@ -1,0 +1,30 @@
+/* pages/organization/index.wxss */
+page {
+    word-break: break-all;
+}
+
+/* 小组列表 */
+.organ-container .tag {
+    display: inline-block;
+    background-color: #f53d6b;
+    color: #ffffff;
+    font-size: 20rpx;
+    padding: 10rpx 20rpx;
+    margin: 20rpx 0;
+}
+
+.organ-container .organ-list {
+    width: 999%;
+    height: 200rpx;
+    padding: 5rpx 0;
+    overflow-x: auto;
+}
+
+.organ-list .organ-item {
+    float: left;
+    width: 200rpx;
+    height: 170rpx;
+    margin: 0 15rpx;
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.25);
+    border-radius: 5px 5px;
+}

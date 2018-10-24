@@ -1,13 +1,37 @@
 /**index.wxss**/
 page {
-    justify-content: space-between;
-    background: #efefef;
-    padding: 25rpx;
-    box-sizing: border-box;
+    background: #ececec;
     word-break: break-all;
 }
 
-.plan-item {
+/* 切换tab */
+
+.choose-tab-container {
+    overflow: hidden;
+}
+
+.choose-tab-container .choose-tab {
+    float: left;
+    width: 20%;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: 25rpx 0 0 4%;
+    background: linear-gradient(to right, #3456c1, #1e79ad);
+    color: #ffffff;
+    text-align: center;
+    font-size: 27rpx;
+    border-radius: 5px;
+}
+
+/* 计划列表 */
+
+.plan-list-container {
+    overflow: hidden;
+    padding: 25rpx;
+    box-sizing: border-box;
+}
+
+.plan-list-container .plan-item {
     position: relative;
     overflow: hidden;
     float: left;
@@ -40,7 +64,7 @@ page {
     font-size: 30rpx;
 }
 
-.plan-title .type-tag {
+.plan-title .amount {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -50,7 +74,7 @@ page {
     line-height: 35rpx;
     padding: 0 10rpx;
     margin: auto 0;
-    background-color: #3456c1;
+    background-color: #f53d6b;
     color: #ffffff;
     border-radius: 3px 3px;
 }

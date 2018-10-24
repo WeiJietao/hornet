@@ -1,39 +1,39 @@
 {
-    "pages":[
-        "pages/index/index",
-        "pages/addCgi/addCgi"
-    ],
-    "window":{
-        "backgroundColor":"#3456c1",
-        "backgroundTextStyle":"light",
-        "navigationBarBackgroundColor": "#3456c1",
-        "navigationBarTitleText": "红蓝计划",
-        "navigationBarTextStyle":"#ffffff"
-    },
-    "tabBar": {
-        "color": "#707070",
-        "selectedColor": "#3456c1",
-        "borderStyle": "white",
-        "backgroundColor": "#ffffff",
-        "list": [
-            {
-                "text": "计划",
-                "pagePath": "pages/index/index",
-                "iconPath": "images/plan.png",
-                "selectedIconPath": "images/plan-active.png"
-            },
-            {
-                "text": "小组",
-                "pagePath": "pages/index/index",
-                "iconPath": "images/group.png",
-                "selectedIconPath": "images/group-active.png"
-            },
-            {
-                "text": "我的",
-                "pagePath": "pages/index/index",
-                "iconPath": "images/user.png",
-                "selectedIconPath": "images/user-active.png"
-            }
-        ]
-    }
+  "pages": [
+    "pages/index/index",
+    "pages/organization/index"
+  ],
+  "window": {
+    "backgroundColor": "#3456c1",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3456c1",
+    "navigationBarTitleText": "红蓝计划",
+    "navigationBarTextStyle": "#ffffff"
+  },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#3456c1",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "text": "计划",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/plan.png",
+        "selectedIconPath": "images/plan-active.png"
+      },
+      {
+        "text": "小组",
+        "pagePath": "pages/organization/index",
+        "iconPath": "images/group.png",
+        "selectedIconPath": "images/group-active.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user-active.png"
+      }
+    ]
+  }
 }

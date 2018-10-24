@@ -10,18 +10,25 @@ Page({
         takeSession: false,
         requestResult: '',
 
+        chooseTabs: [
+            { text: '个人' },
+            { text: '小组' },
+            { text: '附近' },
+            { text: '热门' }
+        ],
+
         activities: [
             {
                 img: './act1.jpg',
                 title: 'Activity 1',
-                tag: '我的',
+                amount: '10',
                 host: 'WJT20',
                 detail: 'WJT200000000000000000000000000000000000000'
             },
             {
                 img: './act2.jpg',
                 title: 'Activity 2',
-                tag: '小组',
+                amount: '100',
                 host: 'WJT20',
                 detail: 'WJT200000000000000000000000000000000000000'
             }

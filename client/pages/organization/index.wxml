@@ -1,0 +1,14 @@
+<!--pages/organization/index.wxml-->
+<view>
+
+    <view class="organ-container">
+        <view class="tag">我的小组</view>
+        <view class="organ-list">
+            <view class="organ-item"></view>
+            <view class="organ-item"></view>
+            <view class="organ-item"></view>
+            <view class="organ-item"></view>
+        </view>
+    </view>
+
+</view>

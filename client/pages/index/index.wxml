@@ -1,15 +1,28 @@
 <!--index.wxml-->
 <view>
-    <view wx:for="{{activities}}" class="plan-item">
-        <image class="plan-img" src="{{item.img}}" />
-        <view class="plan-info">
-            <text class="plan-title bold">{{item.title}}<text class="type-tag">{{item.tag}}</text></text>
-            <text class="plan-host">
-                <text class="bold">HOST : </text>{{item.host}}
-            </text>
-            <text class="plan-detail">
-                <text class="bold">DETAIL : </text>{{item.detail}}
-            </text>
+
+    <view class="choose-tab-container">
+        <view wx:for="{{chooseTabs}}" wx:key="{{index}}" class="choose-tab">
+            <text class="tab-text">{{item.text}}</text>
+        </view>
+    </view>
+
+    <view class="plan-list-container">
+        <view wx:for="{{activities}}" wx:key="{{index}}" class="plan-item">
+            <image class="plan-img" src="{{item.img}}" />
+            <view class="plan-info">
+                <text class="plan-title bold">{{
+                    item.title
+                }}<text class="amount">{{
+                    item.amount
+                }}</text></text>
+                <text class="plan-host">
+                    <text class="bold">HOST : </text>{{item.host}}
+                </text>
+                <text class="plan-detail">
+                    <text class="bold">DETAIL : </text>{{item.detail}}
+                </text>
+            </view>
         </view>
     </view>
 </view>
