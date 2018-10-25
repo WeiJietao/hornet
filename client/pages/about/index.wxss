@@ -1,0 +1,21 @@
+/* client/pages/about/index.wxss */
+
+/* 关于头部 */
+.about-head {
+    position: relative;
+    height: 200rpx;
+    background-color: #3456c1;
+}
+
+.about-head .logo {
+    position: absolute;
+    bottom: -75rpx;
+    left: 0;
+    right: 0;
+    width: 150rpx;
+    height: 150rpx;
+    margin: 0 auto;
+    border-radius: 150rpx;
+    border: 5rpx double #ffffff;
+    background-color: #e94e75;
+}

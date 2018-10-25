@@ -2,8 +2,8 @@
 <view>
 
     <view class="user-board-container">
-        <view class="user-avator"></view>
-        <text class="user-name">WJT20</text>
+        <image class="user-avator" src="{{avator}}" />
+        <text class="user-name">{{nickname}}</text>
     </view>
 
     <view class="record-list">
@@ -16,12 +16,14 @@
     </view>
 
     <view class="func-list">
-        <view class="func-item bottom-border">
+        <view class="func-item bottom-border" bindtap="onGotoAboutPage">
             <text class="func-text">关于我们</text>
+            <image class="arrow" src="./arrow.png" />
         </view>
         <view class="func-item text-center bg-red">
-            <text class="func-text white">退出登录</text>
+            <view class="func-text white" bindtap="onLogout">退出登录</view>
         </view>
     </view>
 
+    <text class="toast {{ifShowToast?'show':'hide'}}">{{toastText}}</text>
 </view>

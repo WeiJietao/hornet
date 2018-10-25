@@ -2,7 +2,8 @@
     "pages": [
         "pages/index/index",
         "pages/organization/index",
-        "pages/center/index"
+        "pages/center/index",
+        "pages/about/index"
     ],
     "window": {
         "backgroundColor": "#3456c1",

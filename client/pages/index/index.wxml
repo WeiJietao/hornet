@@ -1,8 +1,5 @@
 <!--index.wxml-->
 <view>
-
-    <button open-type="getUserInfo">登录·请求微信授权</button>
-
     <view class="choose-tab-container">
         <view wx:for="{{chooseTabs}}" wx:key="{{index}}" class="choose-tab">
             <text class="tab-text">{{item.text}}</text>
@@ -25,4 +22,16 @@
             </view>
         </view>
     </view>
+
+    <view class="dialog-container {{ifShowDialog?'show':'hide'}}">
+        <view class="dialog-body">
+            <view class="dialog-title text-center">
+                <text class="title-text">登录提示</text>
+            </view>
+            <view class="dialog-cont text-center">请点击按钮获取微信授权信息</view>
+            <button class="dialog-btn" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取授权</button>
+        </view>
+    </view>
+
+    <text class="toast {{ifShowToast?'show':'hide'}}">{{toastText}}</text>
 </view>
