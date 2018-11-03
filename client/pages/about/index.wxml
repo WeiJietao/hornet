@@ -1,0 +1,8 @@
+<!--client/pages/about/index.wxml-->
+<view>
+
+    <view class="about-head">
+        <view class="logo"></view>
+    </view>
+
+</view>

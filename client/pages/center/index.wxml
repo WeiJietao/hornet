@@ -1,0 +1,29 @@
+<!--pages/center/index.wxml-->
+<view>
+
+    <view class="user-board-container">
+        <image class="user-avator" src="{{avator}}" />
+        <text class="user-name">{{nickname}}</text>
+    </view>
+
+    <view class="record-list">
+        <view class="record-item">
+            <text class="record-text">
+                <text class="bold">参加计划数 : </text>
+                <text class="right">100</text>
+            </text>
+        </view>
+    </view>
+
+    <view class="func-list">
+        <view class="func-item bottom-border" bindtap="onGotoAboutPage">
+            <text class="func-text">关于我们</text>
+            <image class="arrow" src="./arrow.png" />
+        </view>
+        <view class="func-item text-center bg-red">
+            <view class="func-text white" bindtap="onLogout">退出登录</view>
+        </view>
+    </view>
+
+    <text class="toast {{ifShowToast?'show':'hide'}}">{{toastText}}</text>
+</view>

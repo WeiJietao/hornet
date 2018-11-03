@@ -1,124 +1,101 @@
 /**index.wxss**/
 page {
-    background: #F6F6F6;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.userinfo, .uploader, .tunnel {
-    margin-top: 40rpx;
-    height: 140rpx;
-    width: 100%;
-    background: #FFF;
-    border: 1px solid rgba(0, 0, 0, .1);
-    border-left: none;
-    border-right: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    transition: all 300ms ease;
-}
-
-.userinfo-avatar {
-    width: 100rpx;
-    height: 100rpx;
-    margin: 20rpx;
-    border-radius: 50%;
-}
-
-.userinfo-nickname {
-    font-size: 32rpx;
-    color: #007AFF;
-}
-
-.uploader, .tunnel {
-    height: auto;
-    padding: 0 0 0 40rpx;
-    flex-direction: column;
-    align-items: flex-start;
-    box-sizing: border-box;
-}
-
-.uploader-text, .tunnel-text {
-    width: 100%;
-    line-height: 52px;
-    font-size: 34rpx;
-    color: #007AFF;
-}
-
-.uploader-container {
-    width: 100%;
-    height: 400rpx;
-    padding: 20rpx 20rpx 20rpx 0;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    box-sizing: border-box;
-    border-top: 1px solid rgba(0, 0, 0, .1);
-}
-
-.uploader-image {
-    width: 100%;
-    height: 360rpx;
-}
-
-.tunnel {
-    padding: 0 0 0 40rpx;
-}
-
-.tunnel-text {
-    position: relative;
-    color: #222;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    border-top: 1px solid rgba(0, 0, 0, .1);
-}
-
-.tunnel-text:first-child {
-    border-top: none;
-}
-
-.tunnel-switch {
-    position: absolute;
-    right: 20rpx;
-    top: -2rpx;
-}
-
-.disable {
-    color: #888;
-}
-
-.service {
-    position: fixed;
-    right: 40rpx;
-    bottom: 40rpx;
-    width: 140rpx;
-    height: 140rpx;
-    border-radius: 50%;
-    background: linear-gradient(#007AFF, #0063ce);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    transition: all 300ms ease;
-}
-
-.service-button {
-    position: absolute;
-    top: 40rpx;
-}
-
-.service:active {
-    box-shadow: none;
-}
-
-.request-text {
-    padding: 20rpx 0;
-    font-size: 24rpx;
-    line-height: 36rpx;
+    background: #f0f0f0;
     word-break: break-all;
+}
+
+/* 切换tab */
+
+.choose-tab-container {
+    overflow: hidden;
+}
+
+.choose-tab-container .choose-tab {
+    float: left;
+    width: 20%;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: 25rpx 0 0 4%;
+    background: linear-gradient(to right, #3456c1, #1e79ad);
+    color: #ffffff;
+    text-align: center;
+    font-size: 27rpx;
+    border-radius: 5px;
+}
+
+/* 计划列表 */
+
+.plan-list-container {
+    overflow: hidden;
+    padding: 25rpx;
+    box-sizing: border-box;
+}
+
+.plan-list-container .plan-item {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 100%;
+    height: 200rpx;
+    margin-bottom: 25rpx;
+    background-color: #ffffff;
+    border-radius: 3px 3px;
+}
+
+.plan-item .plan-img {
+    width: 30%;
+    max-width: 200rpx;
+}
+
+.plan-item .plan-info {
+    float: right;
+    box-sizing: border-box;
+    width: 68%;
+    padding-right: 20rpx;
+}
+
+.plan-info .plan-title {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 60rpx;
+    line-height: 60rpx;
+    border-bottom: 1px solid #ececec;
+    font-size: 30rpx;
+}
+
+.plan-title .amount {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 18rpx;
+    height: 30rpx;
+    line-height: 32rpx;
+    padding: 0 10rpx;
+    margin: auto 0;
+    background-color: #f53d6b;
+    color: #ffffff;
+    border-radius: 3px 3px;
+}
+
+.plan-info .plan-host {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 25rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.plan-info .plan-detail {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 80rpx;
+    line-height: 28rpx;
+    font-size: 25rpx;
+    color: #8c8c8c;
 }
