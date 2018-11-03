@@ -1,12 +1,12 @@
 
 # Hornet #
 
-流程设计稿:
+![image](https://raw.githubusercontent.com/WebUnion-core/hornet/master/asset/head.jpg)
 
-![image](./info/structure.png)
+> Hornet(中文名: 黄蜂) 是由 WebUnion 自主开发的一款效率管理类微信小程序。
 
-设计稿 URL: http://naotu.baidu.com/file/920adc6941efd782ec806a1e66618e42
+小程序码:
 
----
+![image](https://raw.githubusercontent.com/WebUnion-core/hornet/master/asset/identify.jpg)
 
-START: 2018/11/03
+> CREATE DATE: 2018-11-03
