@@ -1,31 +1,75 @@
 /**app.wxss**/
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
-} 
-.bold {
-    font-weight: 700;
-}
+
+/* 元素对齐方式 */
+
 .right {
     float: right;
 }
-.bottom-border {
-    border-bottom: 1px solid #dcdcdc;
+
+/* 字体大小 */
+
+.font-30 {
+    font-size: 30rpx;
 }
+
+.font-35 {
+    font-size: 35rpx;
+}
+
+.font-40 {
+    font-size: 40rpx;
+}
+
+.font-45 {
+    font-size: 45rpx;
+}
+
+/* 字体颜色 */
+
 .red {
     color: #c90738;
 }
+
 .white {
     color: #ffffff;
 }
+
+.black1 {
+    color: #434343;
+}
+
+.black2 {
+    color: #040404;
+}
+
+/* 背景颜色 */
+
 .bg-red {
     background-color: #c90738;
 }
+
+.bg-yellow {
+    background-color: #ffcc0b;
+}
+
+.bg-black {
+    background-color: #040404;
+}
+
+/* 文本对齐方式 */
+
 .text-center {
     text-align: center;
 }
+
+/* 粗细程度 */
+
+.bold {
+    font-weight: 700;
+}
+
+/* 显示状态 */
+
 .hide {
     display: none;
 }
@@ -33,7 +77,27 @@
     display: initial;
 }
 
+/* 其他 */
+
+.bottom-border {
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.right-border {
+    border-right: 1px solid #dcdcdc;
+}
+
+/* 页面容器 */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
 /* toast */
+
 .toast {
     position: fixed;
     bottom: 50rpx;
@@ -50,6 +114,7 @@
 }
 
 /* dialog */
+
 .dialog-container {
     position: fixed;
     top: 0;

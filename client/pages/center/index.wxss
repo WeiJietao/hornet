@@ -8,8 +8,8 @@ page {
 /* 用户信息板 */
 .user-board-container {
     position: relative;
-    height: 300rpx;
-    background-color: #3456c1;
+    height: 400rpx;
+    background-color: #040404;
 }
 
 .user-board-container .user-avator {
@@ -18,11 +18,11 @@ page {
     bottom: 0;
     left: 0;
     right: 0;
-    width: 130rpx;
-    height: 130rpx;
+    width: 150rpx;
+    height: 150rpx;
     margin: auto;
     background-color: #ffffff;
-    border-radius: 65rpx;
+    border-radius: 75rpx;
 }
 
 .user-board-container .user-name {
@@ -31,12 +31,13 @@ page {
     display: block;
     text-align: center;
     width: 100%;
-    margin-top: 40rpx;
+    margin-top: 60rpx;
     font-size: 30rpx;
-    color: #ffffff;
+    color: #ffcc0b;
 }
 
 /* 记录列表 */
+
 .record-list {
     width: 100%;
     height: 100rpx;
@@ -55,6 +56,7 @@ page {
 }
 
 /* 功能列表 */
+
 .func-list {
     position: relative;
     width: 100%;
@@ -65,16 +67,16 @@ page {
 }
 
 .func-list .func-item {
-    width: 95%;
-    height: 100rpx;
-    line-height: 100rpx;
+    box-sizing: border-box;
+    width: 100%;
+    height: 120rpx;
+    line-height: 120rpx;
     padding: 0 25rpx;
-    margin: 0 auto;
 }
 
 .func-item .arrow {
     float: right;
     width: 30rpx;
     height: 30rpx;
-    margin: 35rpx 10rpx;
+    margin: 45rpx 10rpx;
 }

@@ -1,33 +1,14 @@
 /**index.wxss**/
 page {
-    background: #f0f0f0;
+    background: #ffffff;
     word-break: break-all;
-}
-
-/* 切换tab */
-
-.choose-tab-container {
-    overflow: hidden;
-}
-
-.choose-tab-container .choose-tab {
-    float: left;
-    width: 20%;
-    height: 80rpx;
-    line-height: 80rpx;
-    margin: 25rpx 0 0 4%;
-    background: linear-gradient(to right, #3456c1, #1e79ad);
-    color: #ffffff;
-    text-align: center;
-    font-size: 27rpx;
-    border-radius: 5px;
 }
 
 /* 计划列表 */
 
 .plan-list-container {
     overflow: hidden;
-    padding: 25rpx;
+    padding: 30rpx 25rpx;
     box-sizing: border-box;
 }
 
@@ -37,9 +18,10 @@ page {
     float: left;
     width: 100%;
     height: 200rpx;
-    margin-bottom: 25rpx;
+    margin-bottom: 30rpx;
     background-color: #ffffff;
     border-radius: 3px 3px;
+    box-shadow: 0 0 5px 5px #dcdcdc;
 }
 
 .plan-item .plan-img {

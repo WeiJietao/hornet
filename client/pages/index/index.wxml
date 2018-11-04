@@ -1,11 +1,5 @@
 <!--index.wxml-->
 <view>
-    <view class="choose-tab-container">
-        <view wx:for="{{chooseTabs}}" wx:key="{{index}}" class="choose-tab">
-            <text class="tab-text">{{item.text}}</text>
-        </view>
-    </view>
-
     <view class="plan-list-container">
         <view wx:for="{{activities}}" wx:key="{{index}}" class="plan-item">
             <image class="plan-img" src="{{item.img}}" />

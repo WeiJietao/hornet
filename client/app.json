@@ -1,22 +1,22 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/organization/index",
         "pages/center/index",
-        "pages/about/index"
+        "pages/about/index",
+        "pages/organization/index"
     ],
     "window": {
-        "backgroundColor": "#3456c1",
+        "backgroundColor": "#040404",
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#3456c1",
-        "navigationBarTitleText": "红蓝计划",
-        "navigationBarTextStyle": "#ffffff"
+        "navigationBarBackgroundColor": "#040404",
+        "navigationBarTitleText": "HornetPlan",
+        "navigationBarTextStyle": "#ffcc0b"
     },
     "tabBar": {
-        "color": "#707070",
-        "selectedColor": "#3456c1",
+        "color": "#ffffff",
+        "selectedColor": "#ffcc0b",
         "borderStyle": "white",
-        "backgroundColor": "#ffffff",
+        "backgroundColor": "#040404",
         "list": [
             {
                 "text": "计划",
@@ -27,8 +27,8 @@
             {
                 "text": "小组",
                 "pagePath": "pages/organization/index",
-                "iconPath": "images/group.png",
-                "selectedIconPath": "images/group-active.png"
+                "iconPath": "images/organization.png",
+                "selectedIconPath": "images/organization-active.png"
             },
             {
                 "text": "我的",

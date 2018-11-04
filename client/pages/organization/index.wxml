@@ -1,43 +1,23 @@
 <!--pages/organization/index.wxml-->
 <view>
-
-    <view class="organ-container">
-        <view class="tag">我的小组</view>
-        <view class="organ-list">
-            <view wx:for="{{myOrganList}}" wx:key="{{index}}" class="organ-item">
-                <image class="organ-img" src="{{item.img}}" />
-                <text class="organ-title">{{item.title}}</text>
-                <view class="organ-detail">{{item.detail}}</view>
-                <view class="act-amount">{{item.actAmount}}</view>
+    <view class="organization-container">
+        <view class="organization-nav bg-yellow black2 text-center">
+            <view class="nav-item">
+                <image class="item-icon" src="./../../images/search.png" />
+                <text class="item-text">搜索</text>
             </view>
-            <view class="empty-item"></view>
+            <view class="nav-item">
+                <image class="item-icon" src="./../../images/create.png" />
+                <text class="item-text">创建</text>
+            </view>
+        </view>
+
+        <view class="organization-card">
+            <image class="card-img" src="./../../images/webunion.jpg" />
+            <view class="card-info">
+                <text class="info-title">WEB_UNION</text>
+                <text class="info-introduce">国际互联网科技研究总部(世界万维网开发者联盟)</text>
+            </view>
         </view>
     </view>
-
-    <view class="organ-container">
-        <view class="tag">热门小组</view>
-        <view class="organ-list">
-            <view wx:for="{{hotOrganList}}" wx:key="{{index}}" class="organ-item">
-                <image class="organ-img" src="{{item.img}}" />
-                <text class="organ-title">{{item.title}}</text>
-                <view class="organ-detail">{{item.detail}}</view>
-                <view class="act-amount">{{item.actAmount}}</view>
-            </view>
-            <view class="empty-item"></view>
-        </view>
-    </view>
-
-    <view class="organ-container">
-        <view class="tag">附近小组</view>
-        <view class="organ-list">
-            <view wx:for="{{nearOrganList}}" wx:key="{{index}}" class="organ-item">
-                <image class="organ-img" src="{{item.img}}" />
-                <text class="organ-title">{{item.title}}</text>
-                <view class="organ-detail">{{item.detail}}</view>
-                <view class="act-amount">{{item.actAmount}}</view>
-            </view>
-            <view class="empty-item"></view>
-        </view>
-    </view>
-
 </view>

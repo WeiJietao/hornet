@@ -1,79 +1,64 @@
 /* pages/organization/index.wxss */
-page {
-    background: #f0f0f0;
-}
 
-/* 小组列表 */
-.organ-container .tag {
-    display: inline-block;
-    background-color: #f53d6b;
-    color: #ffffff;
-    font-size: 25rpx;
-    padding: 15rpx 20rpx;
-    margin: 20rpx 0;
-}
+/* 小组功能导航 */
 
-.organ-container .organ-list {
+.organization-nav {
     display: flex;
-    height: 320rpx;
-    padding: 30rpx 35rpx;
-    overflow: auto;
+    height: 100rpx;
+    line-height: 88rpx;
+    font-size: 28rpx;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    border-bottom: 20rpx solid #ececec;
 }
 
-.organ-list .empty-item {
+.organization-nav .nav-item {
+    box-sizing: border-box;
+    width: 50%;
+    border: 1px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+.nav-item .item-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 38rpx;
+    height: 38rpx;
+    margin: -5rpx 20rpx 0 0;
+    border-radius: 2px;
+}
+
+/* 小组卡片 */
+
+.organization-card {
+    height: 180rpx;
+    padding: 20rpx;
+    border-bottom: 20rpx solid #ececec;
+}
+
+.organization-card .card-img {
     float: left;
-    min-width: 1rpx;
+    width: 180rpx;
     height: 100%;
 }
 
-.organ-list .organ-item {
-    position: relative;
-    float: left;
-    min-width: 300rpx;
-    height: 100%;
-    margin: 0 35rpx 0 0;
-    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.25);
-    background-color: #ffffff;
+.organization-card .card-info {
+    padding-left: 210rpx;
 }
 
-.organ-item .organ-img {
+.card-info .info-title {
     display: block;
-    width: 100%;
-    height: 150rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    font-size: 32rpx;
 }
 
-.organ-item .organ-title {
+.card-info .info-introduce {
     display: block;
     box-sizing: border-box;
-    width: 100%;
-    height: 50rpx;
-    line-height: 50rpx;
-    font-size: 25rpx;
-    background-color: rgba(0,0,0,0.75);
-    color: #ffffff;
-    text-align: center;
-}
-
-.organ-item .organ-detail {
-    overflow: hidden;
-    box-sizing: border-box;
-    word-break: break-all;
-    width: 100%;
-    height: 120rpx;
-    line-height: 35rpx;
-    padding: 10rpx 16rpx;
-    font-size: 25rpx;
-}
-
-.organ-item .act-amount {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50rpx;
-    height: 40rpx;
-    line-height: 40rpx;
-    text-align: center;
-    background-color: #f53d6b;
-    color: #ffffff;
-    font-size: 20rpx;
+    height: 110rpx;
+    padding: 10rpx 0;
+    font-size: 28rpx;
+    color: #acacac;
 }

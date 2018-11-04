@@ -9,13 +9,6 @@ Page({
         ifShowDialog: false,
         toastText: '',
 
-        chooseTabs: [
-            { text: '个人' },
-            { text: '小组' },
-            { text: '附近' },
-            { text: '热门' }
-        ],
-
         activities: [
             {
                 img: './act1.jpg',
