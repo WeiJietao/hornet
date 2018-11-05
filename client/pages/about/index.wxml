@@ -1,8 +1,13 @@
 <!--client/pages/about/index.wxml-->
-<view>
-
-    <view class="about-head">
-        <view class="logo"></view>
+<view class="about-container">
+    <view class="about-head bg-black">
+        <image class="logo" src="./../../images/logo.png" />
     </view>
 
+    <view class="about-info">
+        <text class="info-text">HornetPlan是由WebUnion自主开发的一款效率管理类微信小程序。</text>
+        <text class="info-text"><text class="bold">GitHub地址：</text>https://github.com/WebUnion-core/hornet</text>
+
+        <text class="info-text bold">开发版本：</text>
+    </view>
 </view>
