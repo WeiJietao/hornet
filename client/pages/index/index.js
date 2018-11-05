@@ -95,5 +95,10 @@ Page({
         this.setData({
             ifShowDialog: false
         });
+    },
+
+    // 跳转活动详情页面
+    onGotoDetailPage: function () {
+        wx.navigateTo({ url: '/pages/detail/index' });
     }
 })

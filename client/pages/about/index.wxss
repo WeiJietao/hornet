@@ -21,8 +21,8 @@
 
 /* 关于信息 */
 .about-container .about-info {
-    padding: 20rpx;
-    font-size: 35rpx;
+    padding: 20rpx 30rpx;
+    font-size: 32rpx;
     line-height: 50rpx;
 }
 
@@ -30,4 +30,11 @@
     display: block;
     width: 100%;
     margin: 25rpx 0;
+}
+
+.about-info .info-img {
+    display: block;
+    width: 300rpx;
+    height: 300rpx;
+    margin: 60rpx auto;
 }

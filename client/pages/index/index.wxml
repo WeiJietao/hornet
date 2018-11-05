@@ -1,7 +1,40 @@
 <!--index.wxml-->
 <view>
     <view class="plan-list-container">
-        <view wx:for="{{activities}}" wx:key="{{index}}" class="plan-item">
+        <view class="plan-label">
+            <text class="label-text">个人活动</text>
+            <view class="triangle" />
+        </view>
+
+        <view wx:for="{{activities}}"
+            wx:key="{{index}}"
+            class="plan-item"
+            bindtap="onGotoDetailPage">
+            <image class="plan-img" src="{{item.img}}" />
+            <view class="plan-info">
+                <text class="plan-title bold">{{
+                    item.title
+                }}<text class="amount">{{
+                    item.amount
+                }}</text></text>
+                <text class="plan-host">
+                    <text class="bold">举办人 : </text>{{item.host}}
+                </text>
+                <text class="plan-detail">{{item.detail}}</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="plan-list-container">
+        <view class="plan-label">
+            <text class="label-text">小组活动</text>
+            <view class="triangle" />
+        </view>
+
+        <view wx:for="{{activities}}"
+            wx:key="{{index}}"
+            class="plan-item"
+            bindtap="onGotoDetailPage">
             <image class="plan-img" src="{{item.img}}" />
             <view class="plan-info">
                 <text class="plan-title bold">{{
@@ -22,7 +55,7 @@
             <view class="dialog-title text-center">
                 <text class="title-text">登录提示</text>
             </view>
-            <view class="dialog-cont text-center">请点击按钮获取微信授权信息</view>
+            <view class="dialog-cont text-center">请点击按钮获取微信授权</view>
             <button class="dialog-btn" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取授权</button>
         </view>
     </view>

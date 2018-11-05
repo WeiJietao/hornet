@@ -3,7 +3,10 @@
         "pages/index/index",
         "pages/center/index",
         "pages/about/index",
-        "pages/organization/index"
+        "pages/organization/index",
+        "pages/search/index",
+        "pages/build/index",
+        "pages/detail/index"
     ],
     "window": {
         "backgroundColor": "#040404",

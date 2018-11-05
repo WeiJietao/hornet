@@ -5,7 +5,43 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        organazationList: [
+            {
+                name: 'WEB_UNION',
+                introduce: '国际互联网科技研究总部(世界万维网开发者联盟)',
+                img: './../../images/webunion.jpg',
+                actAmount: 50,
+                parAmount: 200
+            },
+            {
+                name: 'WEB_UNION',
+                introduce: '国际互联网科技研究总部(世界万维网开发者联盟)',
+                img: './../../images/webunion.jpg',
+                actAmount: 100,
+                parAmount: 100
+            },
+            {
+                name: 'WEB_UNION',
+                introduce: '国际互联网科技研究总部(世界万维网开发者联盟)',
+                img: './../../images/webunion.jpg',
+                actAmount: 50,
+                parAmount: 50
+            },
+            {
+                name: 'WEB_UNION',
+                introduce: '国际互联网科技研究总部(世界万维网开发者联盟)',
+                img: './../../images/webunion.jpg',
+                actAmount: 5,
+                parAmount: 10
+            },
+            {
+                name: 'WEB_UNION',
+                introduce: '国际互联网科技研究总部(世界万维网开发者联盟)',
+                img: './../../images/webunion.jpg',
+                actAmount: 5,
+                parAmount: 10
+            }
+        ]
     },
 
     /**
@@ -62,5 +98,15 @@ Page({
      */
     onShareAppMessage: function () {
 
-    }
+    },
+
+    // 跳转搜索页面
+    onGotoSearchPage: function () {
+        wx.navigateTo({ url: '/pages/search/index' });
+    },
+
+    // 跳转创建页面
+    onGotoBuildPage: function () {
+        wx.navigateTo({ url: '/pages/build/index' });
+    }    
 })
