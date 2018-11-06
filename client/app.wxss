@@ -77,6 +77,25 @@
     display: initial;
 }
 
+/* flex完全居中 */
+.flex-complete-middle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* flex竖直居中 */
+.flex-vertical-middle {
+	display: flex;
+	align-items: center;
+}
+
+/* flex水平居中 */
+.flex-horizontal-middle {
+	display: flex;
+	justify-content: center;
+}
+
 /* 其他 */
 
 .bottom-border {
