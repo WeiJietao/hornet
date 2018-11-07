@@ -1,31 +1,29 @@
 <!--pages/organization/index.wxml-->
-<view>
-    <view class="organization-container">
-        <view class="organization-nav bg-yellow black2 text-center">
-            <view class="nav-item" bindtap="onGotoSearchPage">
-                <image class="item-icon" src="./../../images/search.png" />
-                <text class="item-text">搜索</text>
-            </view>
-            <view class="nav-item" bindtap="onGotoBuildPage">
-                <image class="item-icon" src="./../../images/create.png" />
-                <text class="item-text">创建</text>
+<view class="organization-container">
+    <view class="organization-nav bg-yellow black2 text-center">
+        <view class="nav-item" bindtap="onGotoSearchPage">
+            <image class="item-icon" src="./../../images/search.png" />
+            <text class="item-text">搜索</text>
+        </view>
+        <view class="nav-item" bindtap="onGotoBuildPage">
+            <image class="item-icon" src="./../../images/create.png" />
+            <text class="item-text">创建</text>
+        </view>
+    </view>
+
+    <view wx:for="{{organazationList}}"
+        wx:key="{{index}}"
+        class="organization-card">
+        <view class="card-body">
+            <image class="card-img" src="{{item.img}}" />
+            <view class="card-info">
+                <text class="info-title">{{item.name}}</text>
+                <text class="info-introduce">{{item.introduce}}</text>
             </view>
         </view>
-
-        <view wx:for="{{organazationList}}"
-            wx:key="{{index}}"
-            class="organization-card">
-            <view class="card-body">
-                <image class="card-img" src="{{item.img}}" />
-                <view class="card-info">
-                    <text class="info-title">{{item.name}}</text>
-                    <text class="info-introduce">{{item.introduce}}</text>
-                </view>
-            </view>
-            <view class="card-foot">
-                <text class="organization-actamount">活动：{{item.actAmount}}</text>
-                <text class="organization-paramount">成员：{{item.parAmount}}</text>
-            </view>
+        <view class="card-foot">
+            <text class="organization-actamount">活动：{{item.actAmount}}</text>
+            <text class="organization-paramount">成员：{{item.parAmount}}</text>
         </view>
     </view>
 </view>

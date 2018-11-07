@@ -1,2 +1,32 @@
 <!--pages/search/index.wxml-->
-<text>pages/search/index.wxml</text>
+<view class="search-container">
+    <view class="search-bar">
+        <input class="search-input"
+            maxlength="-1"
+            type="text"
+            placeholder="输入小组名或ID进行搜索" />
+        <view class="icon-container">
+            <image class="search-icon" src="./../../images/search.png" />
+        </view>
+    </view>
+
+    <view wx:for="{{organazationList}}"
+        wx:key="{{index}}"
+        class="organization-card">
+        <view class="card-body">
+            <image class="card-img" src="{{item.img}}" />
+            <view class="card-info">
+                <text class="info-title">{{item.name}}</text>
+                <text class="info-introduce">{{item.introduce}}</text>
+            </view>
+        </view>
+        <view class="card-foot">
+            <text class="organization-actamount">活动：{{item.actAmount}}</text>
+            <text class="organization-paramount">成员：{{item.parAmount}}</text>
+        </view>
+    </view>
+
+    <view class="loading-container {{ifShowLoading ? 'show' : 'hide'}}">
+        <view class="loading-img" />
+    </view>
+</view>

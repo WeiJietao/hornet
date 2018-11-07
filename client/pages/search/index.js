@@ -5,14 +5,55 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        ifShowLoading: true,
+        organazationList: [
+            {
+                name: 'WEB_UNION',
+                introduce: '国际互联网科技研究总部(世界万维网开发者联盟)',
+                img: './../../images/webunion.jpg',
+                actAmount: 50,
+                parAmount: 200
+            },
+            {
+                name: 'WEB_UNION',
+                introduce: '国际互联网科技研究总部(世界万维网开发者联盟)',
+                img: './../../images/webunion.jpg',
+                actAmount: 100,
+                parAmount: 100
+            },
+            {
+                name: 'WEB_UNION',
+                introduce: '国际互联网科技研究总部(世界万维网开发者联盟)',
+                img: './../../images/webunion.jpg',
+                actAmount: 50,
+                parAmount: 50
+            },
+            {
+                name: 'WEB_UNION',
+                introduce: '国际互联网科技研究总部(世界万维网开发者联盟)',
+                img: './../../images/webunion.jpg',
+                actAmount: 5,
+                parAmount: 10
+            },
+            {
+                name: 'WEB_UNION',
+                introduce: '国际互联网科技研究总部(世界万维网开发者联盟)',
+                img: './../../images/webunion.jpg',
+                actAmount: 5,
+                parAmount: 10
+            }
+        ]
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        setTimeout(() => {
+            this.setData({
+                ifShowLoading: false
+            });
+        }, 5000);
     },
 
     /**

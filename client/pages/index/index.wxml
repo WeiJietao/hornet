@@ -60,5 +60,5 @@
         </view>
     </view>
 
-    <text class="toast {{ifShowToast?'show':'hide'}}">{{toastText}}</text>
+    <text class="toast {{ifShowToast ? 'show' : 'hide'}}">{{toastText}}</text>
 </view>
