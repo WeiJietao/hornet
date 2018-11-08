@@ -1,1 +1,80 @@
 /* pages/build/index.wxss */
+
+page {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #ececec;
+}
+
+.build-container {
+    box-sizing: border-box;
+    position: absolute;
+    top: 80rpx;
+    left: 0;
+    right: 0;
+    width: 600rpx;
+    margin: 0 auto;
+    box-shadow: 0 0 2px 2px #dcdcdc;
+    background-color: #ffffff;
+}
+
+.build-container .build-figure {
+    box-sizing: border-box;
+    width: 100%;
+    height: 280rpx;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAUBAMAAAAjLUMaAAAAFVBMVEX/zAv/zAv/zAv/zAv/zAv/zAv/zAubXKiLAAAAB3RSTlOBfHFteHVqr9YcGAAAAEdJREFUKM9jgABGQSBwAYLQ0NAgJSAwBgKztDSoLANIWgQiHQqSVkaWBssKOkJ1g7QboUgzMuIzXEAAj27CTmNkHNU9RHQDAPY9ZLZZxBFsAAAAAElFTkSuQmCC);
+    background-size: 100% 100%;
+    padding: 40rpx;
+}
+
+.build-figure .figure-img {
+    display: block;
+    width: 200rpx;
+    height: 200rpx;
+    box-shadow: 0 0 3px 3px #8d7c3d;
+    border-radius: 2px;
+}
+
+.build-container .field-bar {
+    position: relative;
+    min-height: 120rpx;
+    font-size: 35rpx;
+}
+
+.field-bar .input {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 90%;
+    height: 70rpx;
+    margin: auto;
+    padding: 0 20rpx;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.field-bar .textarea {
+    box-sizing: border-box;
+    width: 90%;
+    height: 300rpx;
+    margin: 20rpx auto;
+    padding: 20rpx;
+    border: 1px solid #dcdcdc;
+}
+
+.field-bar .btn {
+    display: block;
+    margin: 30rpx auto;
+    width: 90%;
+    height: 105rpx;
+    line-height: 104rpx;
+    background-color: #ffcc0b;
+    color: #040404;
+    font-size: 38rpx;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px #dcdcdc;
+}

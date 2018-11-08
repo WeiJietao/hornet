@@ -1,2 +1,16 @@
 <!--pages/build/index.wxml-->
-<text>pages/build/index.wxml</text>
+
+<view class="build-container">
+    <view class="build-figure">
+        <image class="figure-img" src="./../../images/webunion.jpg" />
+    </view>
+    <view class="field-bar">
+        <input class="input" type="text" placeholder="名字" />
+    </view>
+    <view class="field-bar">
+        <textarea class="textarea" placeholder="简介"></textarea>
+    </view>
+    <view class="field-bar">
+        <view class="btn">创建</view>
+    </view>
+</view>
