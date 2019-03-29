@@ -5,9 +5,8 @@
     </view>
 
     <view class="about-info">
-        <text class="info-text">HornetPlan是由WebUnion自主开发的一款效率管理类微信小程序。</text>
-        <text class="info-text"><text class="bold">GitHub地址：</text>https://github.com/WebUnion-core/hornet</text>
-        <text class="info-text bold">开发版本：</text>
-        <image class="info-img" src="./../../images/dev-code.jpg" />
+        <text class="info-text">HornetPlan 是由 WebUnion 自主开发的一款效率管理类微信小程序。</text>
+        <text class="info-text">当前版本：1.0.0</text>
+                <text class="info-text">GitHub 地址：https://github.com/WebUnion-core/hornet</text>
     </view>
 </view>

@@ -3,17 +3,16 @@
         "pages/index/index",
         "pages/center/index",
         "pages/about/index",
-        "pages/organization/index",
-        "pages/search/index",
-        "pages/build/index",
-        "pages/detail/index"
+        "pages/detail/index",
+        "pages/create/index",
+        "pages/history/index"
     ],
     "window": {
         "backgroundColor": "#040404",
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#040404",
+        "navigationBarBackgroundColor": "#000",
         "navigationBarTitleText": "HornetPlan",
-        "navigationBarTextStyle": "#ffcc0b"
+        "navigationBarTextStyle": "white"
     },
     "tabBar": {
         "color": "#ffffff",
@@ -28,10 +27,10 @@
                 "selectedIconPath": "images/plan-active.png"
             },
             {
-                "text": "小组",
-                "pagePath": "pages/organization/index",
-                "iconPath": "images/organization.png",
-                "selectedIconPath": "images/organization-active.png"
+                "text": "新建",
+                "pagePath": "pages/create/index",
+                "iconPath": "images/create.png",
+                "selectedIconPath": "images/create-active.png"
             },
             {
                 "text": "我的",

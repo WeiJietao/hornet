@@ -1,18 +1,18 @@
-// pages/build/index.js
+// client/pages/history/index.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        historyPlan: []
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        this.updatePlanList();
     },
 
     /**
@@ -62,5 +62,11 @@ Page({
      */
     onShareAppMessage: function () {
 
+    },
+
+    // 更新计划列表
+    updatePlanList: function () {
+        const historyPlan = wx.getStorageSync('historyPlan') || [];
+        this.setData({ historyPlan });
     }
 })

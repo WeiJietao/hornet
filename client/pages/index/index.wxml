@@ -1,64 +1,56 @@
-<!--index.wxml-->
 <view>
-    <view class="plan-list-container">
+    <!-- 空白提示 -->
+    <image
+        wx:if="{{waitingPlan.length <= 0}}"
+        class="empty-prompt"
+        src="./../../images/empty.jpg" />
+
+    <!-- 个人计划列表 -->
+    <view
+        wx:if="{{waitingPlan.length > 0}}"
+        class="plan-list-container">
+
         <view class="plan-label">
-            <text class="label-text">个人活动</text>
-            <view class="triangle" />
+            <text class="label-text" />
         </view>
 
-        <view wx:for="{{activities}}"
+        <view wx:for="{{waitingPlan}}"
             wx:key="{{index}}"
-            class="plan-item"
-            bindtap="onGotoDetailPage">
-            <image class="plan-img" src="{{item.img}}" />
-            <view class="plan-info">
-                <text class="plan-title bold">{{
-                    item.title
-                }}<text class="amount">{{
-                    item.amount
-                }}</text></text>
-                <text class="plan-host">
-                    <text class="bold">举办人 : </text>{{item.host}}
-                </text>
-                <text class="plan-detail">{{item.detail}}</text>
+            class="plan-item">
+            <view class="plan-card">
+                <view class="plan-info">
+                    <view class="plan-title">
+                        <text class="text">{{item.title}}</text>
+                        <image
+                            class="remove-icon"
+                            src="./../../images/remove.png"
+                            bindtap="onRemovePlan" />
+                    </view>
+                    <text class="plan-time">创建时间 : {{item.createDate}}</text>
+                    <text class="plan-time">提醒时间 : {{item.remindDate}}</text>
+                    <text class="plan-detail">{{item.detail}}</text>
+                </view>
             </view>
+            <view class="brand-space" />
         </view>
+
     </view>
 
-    <view class="plan-list-container">
-        <view class="plan-label">
-            <text class="label-text">小组活动</text>
-            <view class="triangle" />
-        </view>
-
-        <view wx:for="{{activities}}"
-            wx:key="{{index}}"
-            class="plan-item"
-            bindtap="onGotoDetailPage">
-            <image class="plan-img" src="{{item.img}}" />
-            <view class="plan-info">
-                <text class="plan-title bold">{{
-                    item.title
-                }}<text class="amount">{{
-                    item.amount
-                }}</text></text>
-                <text class="plan-host">
-                    <text class="bold">举办人 : </text>{{item.host}}
-                </text>
-                <text class="plan-detail">{{item.detail}}</text>
-            </view>
-        </view>
-    </view>
-
+    <!-- 授权弹窗 -->
     <view class="dialog-container {{ifShowDialog?'show':'hide'}}">
         <view class="dialog-body">
             <view class="dialog-title text-center">
                 <text class="title-text">登录提示</text>
             </view>
             <view class="dialog-cont text-center">请点击按钮获取微信授权</view>
-            <button class="dialog-btn" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取授权</button>
+            <button
+                class="dialog-btn"
+                open-type="getUserInfo"
+                lang="zh_CN"
+                bindgetuserinfo="onGotUserInfo">获取授权</button>
         </view>
     </view>
 
+    <!-- toast -->
     <text class="toast {{ifShowToast ? 'show' : 'hide'}}">{{toastText}}</text>
 </view>

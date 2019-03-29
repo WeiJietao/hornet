@@ -4,9 +4,16 @@
 	"miniprogramRoot": "client/",
 	"qcloudRoot": "server/",
 	"setting": {
-		"newFeature": true
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"uglifyFileName": false,
+		"checkInvalidKey": true
 	},
 	"appid": "wxac9ddb669b1482b5",
-	"projectname": "wplan",
+	"projectname": "hornet",
+	"libVersion": "2.6.4",
 	"condition": {}
 }

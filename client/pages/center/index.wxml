@@ -9,16 +9,20 @@
     <view class="record-list">
         <view class="record-item">
             <text class="record-text">
-                <text class="bold">参加计划数 : </text>
-                <text class="right">100</text>
+                <text class="bold">创建计划总数 : </text>
+                <text class="right">{{totalCreatedPlanAmount}}</text>
             </text>
         </view>
     </view>
 
     <view class="func-list">
-        <view class="func-item bottom-border" bindtap="onGotoAboutPage">
-            <text class="func-text">关于我们</text>
-            <image class="arrow" src="./arrow.png" />
+        <view class="func-item bottom-border" bindtap="onGotoHistoryPage">
+            <text class="func-text">查看历史计划(最近十条)</text>
+            <image class="arrow" src="./../../images/arrow.png" />
+        </view>
+        <view class="func-item" bindtap="onGotoAboutPage">
+            <text class="func-text">关于HornetPlan</text>
+            <image class="arrow" src="./../../images/arrow.png" />
         </view>
     </view>
 

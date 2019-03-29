@@ -1,0 +1,64 @@
+<view>
+    <view class="create-form-container">
+        <view class="create-form-body">
+
+            <!-- 标题 -->
+            <view class="field-item">
+                <text class="content-label">
+                    <text class="double-letter-space">标</text>题：
+                </text>
+                <input
+                    class="content-text-view"
+                    type="text"
+                    maxlength="20"
+                    bindinput="onInputTitle" />
+            </view>
+
+            <!-- 提醒日期 -->
+            <view class="field-item">
+                <text class="content-label">提醒日期：</text>
+                <picker
+                    class="content-date-picker text-center"
+                    bindchange="onChangeRemindDate"
+                    mode="date"
+                    value="{{selectDate}}">
+                    <text>{{selectDate}}</text>
+                </picker>
+                <picker
+                    class="content-date-picker text-center"
+                    bindchange="onChangeRemindTime"
+                    mode="time"
+                    value="{{selectTime}}">
+                    <text>{{selectTime}}</text>
+                </picker>
+            </view>
+
+            <!-- 详情 -->
+            <view class="field-item">
+                <text class="content-label">
+                    <text class="double-letter-space">详</text>情：
+                </text>
+                <textarea
+                    class="content-text-area"
+                    bindinput="onInputDetail" />
+            </view>
+        </view>
+
+        <!-- 按钮组 -->
+        <form
+            class="create-form-btn-group"
+            bind:submit="onSubmitCreateForm"
+            report-submit="true">
+            <!-- <button
+                class="btn bg-yellow white"
+                bindtap="onClickSaveBtn">保 存</button> -->
+            <button
+                class="btn bg-yellow white"
+                formType="submit">创 建</button>
+        </form>
+
+    </view>
+
+    <!-- toast -->
+    <text class="toast {{ifShowToast ? 'show' : 'hide'}}">{{toastText}}</text>
+</view>

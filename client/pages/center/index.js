@@ -8,22 +8,21 @@ Page({
         ifShowToast: false,
         avator: '',
         nickname: '',
-        toastText: ''
+        toastText: '',
+        totalCreatedPlanAmount: 0
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        wx.getStorage({
-            key: 'userInfo',
-            success: (res) => {
-                var userInfo = JSON.parse(res.data);
-                this.setData({
-                    avator: userInfo.avatarUrl,
-                    nickname: userInfo.nickName
-                });
-            }
+        const userInfo = wx.getStorageSync('userInfo') || {
+            avatarUrl: '',
+            nickName: '--'
+        };
+        this.setData({
+            avator: userInfo.avatarUrl,
+            nickname: userInfo.nickName
         });
     },
 
@@ -38,7 +37,10 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        const totalCreatedPlanAmount = parseInt(wx.getStorageSync('totalCreatedPlanAmount') || '0');
+        this.setData({
+            totalCreatedPlanAmount
+        });
     },
 
     /**
@@ -104,5 +106,10 @@ Page({
     // 跳转关于页面
     onGotoAboutPage: function () {
         wx.navigateTo({ url: '/pages/about/index' });
+    },
+
+    // 跳转历史计划页面
+    onGotoHistoryPage: function () {
+        wx.navigateTo({ url: '/pages/history/index' });
     }
 })
