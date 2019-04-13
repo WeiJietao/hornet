@@ -1,2 +1,5 @@
 build/*.js
 config/*.js
+src/pages/counter
+src/pages/logs
+src/utils

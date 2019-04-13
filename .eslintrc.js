@@ -1,4 +1,5 @@
 // http://eslint.org/docs/user-guide/configuring
+// https://github.com/standard/standard/blob/master/docs/RULES-zhcn.md
 
 module.exports = {
   root: true,
@@ -24,7 +25,17 @@ module.exports = {
     // allow async-await
     'generator-star-spacing': 0,
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    // 缩进风格
+    "indent": [
+        1,
+        4,
+        {
+            "SwitchCase": 1
+        }
+    ],
+    // 禁止额外分号
+    "semi": [0, "always"]
   },
   globals: {
     App: true,
