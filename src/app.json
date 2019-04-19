@@ -1,8 +1,10 @@
 {
     "pages": [
         "pages/index/main",
-        "pages/logs/main",
-        "pages/counter/main"
+        "pages/about/main",
+        "pages/center/main",
+        "pages/list/main",
+        "pages/detail/main"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -26,13 +28,13 @@
             },
             {
                 "text": "记录",
-                "pagePath": "pages/index/main",
+                "pagePath": "pages/list/main",
                 "iconPath": "static/tabs/plan.png",
                 "selectedIconPath": "static/tabs/plan-active.png"
             },
             {
                 "text": "我的",
-                "pagePath": "pages/logs/main",
+                "pagePath": "pages/center/main",
                 "iconPath": "static/tabs/user.png",
                 "selectedIconPath": "static/tabs/user-active.png"
             }

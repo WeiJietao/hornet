@@ -3,6 +3,7 @@ function formatNumber (n) {
     return str[1] ? str : `0${str}`;
 }
 
+// 时间格式化工具
 export function formatTime (date) {
     const year = date.getFullYear();
     const month = date.getMonth() + 1;
@@ -18,7 +19,31 @@ export function formatTime (date) {
     return `${t1} ${t2}`;
 }
 
-export default {
-    formatNumber,
-    formatTime
-}
+// 缓存工具
+export const CacheUtil = {
+    getStorage (key) {
+        let data = wx.getStorageSync(key);
+        if (!data) {
+            return null;
+        } else {
+            let now = new Date().getTime();
+            if (now >= parseInt(data.expired)) {
+                wx.removeStorageSync(key);
+                return null;
+            } else {
+                return data.data;
+            }
+        }
+        return;
+    },
+    setStorage (key, data, expired) {
+        let time = new Date().getTime() + expired;
+        wx.setStorageSync(key, {
+            data: data,
+            expired: time
+        });
+    },
+    removeStorage (key) {
+        wx.removeStorageSync(key);
+    }
+};
