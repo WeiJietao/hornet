@@ -1,1 +1,9 @@
-{}
+{
+    "usingComponents": {
+        "wux-popup": "/components/popup/index",
+        "wux-toast": "/components/toast/index",
+        "wux-dialog": "/components/dialog/index",
+        "wux-icon": "/components/icon/index",
+        "wux-image": "/components/image/index"
+    }
+}

@@ -2,26 +2,32 @@
 <view>
 
     <view class="user-board-container">
-        <image class="user-avator" src="{{avator}}" />
-        <text class="user-name">{{nickname}}</text>
+        <image class="user-avator" src="{{ avator }}" />
+        <text class="user-name">{{ nickname }}</text>
     </view>
 
-    <view class="record-list">
-        <view class="record-item">
-            <text class="record-text">
-                <text class="bold">创建计划总数 : </text>
-                <text class="right">{{totalCreatedPlanAmount}}</text>
-            </text>
+    <view class="menu-list">
+        <view class="menu-item">
+            <view class="iconfont icon-order" />
+            <text class="name">订单</text>
+        </view>
+        <view class="menu-item">
+            <view class="iconfont icon-collect" />
+            <text class="name">收藏</text>
+        </view>
+        <view class="menu-item">
+            <view class="iconfont icon-review" />
+            <text class="name">点评</text>
         </view>
     </view>
 
     <view class="func-list">
-        <view class="func-item bottom-border" bindtap="onGotoHistoryPage">
-            <text class="func-text">查看历史计划(最近十条)</text>
+        <view class="func-item" bindtap="onGotoAboutPage">
+            <text class="func-text">数据服务</text>
             <image class="arrow" src="./../../images/arrow.png" />
         </view>
         <view class="func-item" bindtap="onGotoAboutPage">
-            <text class="func-text">关于HornetPlan</text>
+            <text class="func-text">关于我们</text>
             <image class="arrow" src="./../../images/arrow.png" />
         </view>
     </view>

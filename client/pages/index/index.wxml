@@ -1,56 +1,76 @@
-<view>
-    <!-- 空白提示 -->
-    <image
-        wx:if="{{waitingPlan.length <= 0}}"
-        class="empty-prompt"
-        src="./../../images/empty.jpg" />
-
-    <!-- 个人计划列表 -->
+<view class="home-container">
     <view
-        wx:if="{{waitingPlan.length > 0}}"
-        class="plan-list-container">
-
-        <view class="plan-label">
-            <text class="label-text" />
-        </view>
-
-        <view wx:for="{{waitingPlan}}"
-            wx:key="{{index}}"
-            class="plan-item">
-            <view class="plan-card">
-                <view class="plan-info">
-                    <view class="plan-title">
-                        <text class="text">{{item.title}}</text>
-                        <image
-                            class="remove-icon"
-                            src="./../../images/remove.png"
-                            bindtap="onRemovePlan" />
-                    </view>
-                    <text class="plan-time">创建时间 : {{item.createDate}}</text>
-                    <text class="plan-time">提醒时间 : {{item.remindDate}}</text>
-                    <text class="plan-detail">{{item.detail}}</text>
-                </view>
-            </view>
-            <view class="brand-space" />
-        </view>
-
+        bindtap="onClickGotoSelectArea"
+        class="flex-complete-middle area-select-bar"
+    >
+        <text class="text">{{ selectedArea.name }}榜单</text>
+        <wux-icon type="md-arrow-dropdown" />
     </view>
 
-    <!-- 授权弹窗 -->
-    <view class="dialog-container {{ifShowDialog?'show':'hide'}}">
-        <view class="dialog-body">
-            <view class="dialog-title text-center">
-                <text class="title-text">登录提示</text>
-            </view>
-            <view class="dialog-cont text-center">请点击按钮获取微信授权</view>
-            <button
-                class="dialog-btn"
-                open-type="getUserInfo"
-                lang="zh_CN"
-                bindgetuserinfo="onGotUserInfo">获取授权</button>
+    <!-- 标签列表 -->
+    <view
+        wx:if="{{ allTagList.length > 0 }}"
+        class="tag-container"
+    >
+        <view class="main-tag-list">
+            <view
+                wx:for="{{ mainTagList }}"
+                wx:for-item="item"
+                wx:for-index="index"
+                wx:key="item.id"
+                data-id="{{ item.id }}"
+                class="tag-item active"
+            >{{ item.name }}</view>
+        </view>
+        <view
+            bindtap="onToggleSelectTagDialog"
+            class="flex-complete-middle view-more-container"
+        >
+            <text class="text">查看更多</text>
+            <wux-icon type="ios-arrow-down" />
         </view>
     </view>
 
-    <!-- toast -->
-    <text class="toast {{ifShowToast ? 'show' : 'hide'}}">{{toastText}}</text>
+    <!-- 景点列表 -->
+    <scroll-view class="place-list">
+        <view
+            wx:for="{{ placeList }}"
+            wx:for-item="item"
+            wx:for-index="index"
+            wx:key="item.id"
+            data-id="{{ item.id }}"
+            class="place-item"
+        >
+            <image
+                class="image"
+                src="{{ item.img }}"
+            />
+            <text class="title">{{ item.title }}</text>
+            <view class="praise-container">
+                <text class="amount">{{ item.praise }}</text>
+                <wux-icon type="md-thumbs-up" />
+            </view>
+        </view>
+    </scroll-view>
+
+    <wux-popup
+        closable
+        visible="{{ ifShowSelectTag }}"
+        title="全部标签"
+        bind:close="onToggleSelectTagDialog"
+    >
+        <view class="all-tag-list">
+            <view
+                wx:for="{{ allTagList }}"
+                wx:for-item="item"
+                wx:for-index="index"
+                wx:key="item.id"
+                data-id="{{ item.id }}"
+                class="tag-item"
+            >{{ item.name }}</view>
+        </view>
+    </wux-popup>
+
+    <wux-toast id="wux-toast" />
+    <wux-dialog id="wux-dialog" />
 </view>

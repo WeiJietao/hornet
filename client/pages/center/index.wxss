@@ -37,32 +37,45 @@ page {
     color: #ffcc0b;
 }
 
-/* 记录列表 */
 
-.record-list {
+.menu-list {
     width: 100%;
     height: 100rpx;
     background-color: #ffffff;
-    font-size: 30rpx;
-    color: #acacac;
+    font-size: 32rpx;
 }
 
-.record-list .record-item {
-    float: left;
+.menu-list>.menu-item {
     box-sizing: border-box;
-    width: 100%;
-    height: 100rpx;
-    line-height: 100rpx;
-    padding: 0 25rpx;
+    display: inline-block;
+    width: 33.33%;
+    height: 50rpx;
+    margin: 25rpx 0;
+    text-align: center;
 }
 
-/* 功能列表 */
+.menu-item>.iconfont {
+    display: inline-block;
+    width: 40rpx;
+    height: 40rpx;
+    margin: 0 10rpx;
+    vertical-align: middle;
+}
+
+.menu-item>.name {
+    vertical-align: middle;
+}
+
+.menu-list .menu-item:nth-of-type(2n) {
+    border-left: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+}
 
 .func-list {
     position: relative;
     width: 100%;
     margin: 15rpx 0;
-    font-size: 30rpx;
+    font-size: 32rpx;
     background-color: #ffffff;
     color: #434343;
 }
@@ -73,6 +86,11 @@ page {
     height: 120rpx;
     line-height: 120rpx;
     padding: 0 25rpx;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.func-list .func-item:last-of-type {
+    border-bottom: none;
 }
 
 .func-item .arrow {

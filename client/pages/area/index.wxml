@@ -1,0 +1,93 @@
+<!--pages/area/index.wxml-->
+<view class="area-container">
+    <view class="search-bar">
+        <wux-input
+            placeholder="请输入城市名称"
+            value="{{ searchedCondition }}"
+            bind:change="onChangeSearchCondition"
+            controlled
+        />
+        <view
+            bindtap="onClickSearch"
+            class="position-vertical-middle iconfont icon-search"
+        />
+    </view>
+
+    <!-- 搜索内容 -->
+    <view
+        wx:if="{{ !isInited }}"
+        class="all-area-fieldset"
+    >
+        <view class="area-list">
+            <view
+                wx:for="{{ resultCityList }}"
+                wx:for-item="item"
+                wx:for-index="index"
+                wx:key="item.id"
+                data-id="{{ item.id }}"
+                bindtap="onClickSelectArea"
+                class="area-item"
+            >{{ item.name }}</view>
+        </view>
+    </view>
+
+    <!-- 初始内容 -->
+    <view wx:if="{{ isInited }}">
+        <!-- 历史城市 -->
+        <view
+            wx:if="{{ historyCityList.length > 0 }}"
+            class="area-fieldset"
+        >
+            <view class="title">历史城市</view>
+            <view class="area-list">
+                <view
+                    wx:for="{{ historyCityList }}"
+                    wx:for-item="item"
+                    wx:for-index="index"
+                    wx:key="item.id"
+                    data-id="{{ item.id }}"
+                    bindtap="onClickSelectArea"
+                    class="area-item"
+                >{{ item.name }}</view>
+            </view>
+        </view>
+
+        <!-- 热门城市 -->
+        <view
+            wx:if="{{ hotCityList.length > 0 }}"
+            class="area-fieldset"
+        >
+            <view class="title">热门城市</view>
+            <view class="area-list">
+                <view
+                    wx:for="{{ hotCityList }}"
+                    wx:for-item="item"
+                    wx:for-index="index"
+                    wx:key="item.id"
+                    data-id="{{ item.id }}"
+                    bindtap="onClickSelectArea"
+                    class="area-item"
+                >{{ item.name }}</view>
+            </view>
+        </view>
+
+        <!-- 所有城市 -->
+        <view
+            wx:if="{{ allCityList.length > 0 }}"
+            class="all-area-fieldset"
+        >
+            <view class="title">所有城市</view>
+            <view class="area-list">
+                <view
+                    wx:for="{{ allCityList }}"
+                    wx:for-item="item"
+                    wx:for-index="index"
+                    wx:key="item.id"
+                    data-id="{{ item.id }}"
+                    bindtap="onClickSelectArea"
+                    class="area-item"
+                >{{ item.name }}</view>
+            </view>
+        </view>
+    </view>
+</view>
